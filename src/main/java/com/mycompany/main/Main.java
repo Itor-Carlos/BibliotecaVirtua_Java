@@ -20,6 +20,17 @@ public class Main {
         Conta joseConta = new ContaCorrente(agenciaBrasil, jose);
         joseConta.depositar(300);
         joseConta.imprimirInfosComuns();
+        joseConta.sacar(400);
+        joseConta.imprimirInfosComuns();
+        
+        
+        Conta itorConta = new ContaPoupanca(agenciaBrasil, itor);
+        itorConta.depositar(600);
+        itorConta.transferir(300, joseConta);
+        
+        System.out.println("-------------------");
+        joseConta.imprimirInfosComuns();
+        itorConta.imprimirInfosComuns();
         
     }
 }
