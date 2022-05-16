@@ -51,6 +51,7 @@ public abstract class Conta implements IConta{
                 throw new IllegalArgumentException("Para realizar a operação de transferência, deve-se enviar o valor para uma conta existente!");
             }
             contaDestino.depositar(valorTransferencia);
+            this.saldo -= valorTransferencia;
 	}
 
         //sem sets para forçar a utilização dos metodos: saque, deposito, transferir e para impedir possíveis fraudes
