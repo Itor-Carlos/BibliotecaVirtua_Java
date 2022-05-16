@@ -50,6 +50,7 @@ public abstract class Conta implements IConta{
             if(contaDestino == null){
                 throw new IllegalArgumentException("Para realizar a operação de transferência, deve-se enviar o valor para uma conta existente!");
             }
+            contaDestino.depositar(valorTransferencia);
 	}
 
         //sem sets para forçar a utilização dos metodos: saque, deposito, transferir e para impedir possíveis fraudes
