@@ -12,6 +12,14 @@ package com.mycompany.main;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        /*PRIMEIROS TESTES*/
+        Agencia agenciaBrasil = new Agencia("Agencia Brasil","145678");
+        Cliente jose = new Cliente("Jose Renato", "123.456.78-10", 19);
+        Cliente itor = new Cliente("Itor Carlos Souza Queiroz","987.654.321-01",19);
+       
+        Conta joseConta = new ContaCorrente(agenciaBrasil, jose);
+        joseConta.depositar(300);
+        joseConta.imprimirInfosComuns();
+        
     }
 }

@@ -28,6 +28,9 @@ public abstract class Conta implements IConta{
            if(valorSaque <= 0){
                throw new IllegalArgumentException("o valor para saque deve ser maior que 0!");
            }
+           if(valorSaque < saldo){
+               throw new IllegalArgumentException("Não há dinheiro suficiente para esse saque!");
+           }
            this.saldo -= valorSaque;
 	}
 
