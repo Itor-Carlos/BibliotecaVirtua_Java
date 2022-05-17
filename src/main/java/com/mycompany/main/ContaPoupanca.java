@@ -22,6 +22,6 @@ public class ContaPoupanca extends Conta{
     }
  
     public void financiamento(){
-        this.saldo += VALOR_FINANCIAMENTO;
+        this.depositar(VALOR_FINANCIAMENTO);
     }
 }
